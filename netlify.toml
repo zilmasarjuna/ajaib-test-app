@@ -1,7 +1,6 @@
 [build]
   command = "npm run build"
   publish="build"
-  base = "ajaib-test-app"
 [[redirects]]
   from = "/*"
   to = "/index.html"
