@@ -1,0 +1,4 @@
+// List User Request
+export const LIST_USER_REQUEST = 'LIST_USER_REQUEST'
+export const LIST_USER_SUCCESS = 'LIST_USER_SUCCESS'
+export const LIST_USER_FAILURE = 'LIST_USER_FAILURE'
