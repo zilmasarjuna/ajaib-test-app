@@ -1,0 +1,109 @@
+1. dalam OOP class adalah template code program yang dapat diperluas untuk membuat objek. new digunakan untuk membuat objek baru di class tertentu dan this digunakan sebagai referensi property pada objek instance nya
+2. new digunakan untuk membuat objek baru dari kelas tersebut.
+	 how to create instance method and class method: 
+		class Animal { 
+			constructor(name) { 
+				this.name = name;
+			} 
+			showName() { 
+				alert(this.name);
+			}
+		}
+3. 
+	function Person(firstName, lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	Person.prototype.getFullName = function() {
+		return this.firstName + " " + this.lastName;
+	};
+
+	function Student(studentId, firstName, lastName) {
+		this.studentId = studentId;
+	}
+
+	Student.prototype = Object.create(Person.prototype);
+
+	Student.prototype.constructor = Student;
+
+	Student.prototype.getStudentInfo = function() {
+		return this.studentId + " " + this.lastName + ", " + this.firstName;
+	};
+
+	var student = new Student(1, "Bob", "Smith");
+
+4. 
+	class Person {
+		constructor(firstName, lastName) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+		}
+		getFullName() {
+			return this.firstName + " " + this.lastName;
+		}
+	}
+
+	class Student extends Person {
+		constructor(studentId, firstName, lastName) {
+			super(firstName, lastName);
+			this.studentId = studentId;
+		}
+		getStudentInfo() {
+			return this.studentId + " " + this.lastName + ", " + this.firstName;
+		}
+	}
+
+	var student = new Student(1, "Bob", "Smith");
+
+5. 
+	var Module = (function() {
+			// Semua function bisa mengakses satu sama lain 
+			var privateFunc = function() {
+					publicFunc1();
+			};
+
+			var publicFunc1 = function() {
+					publicFunc2();
+			};
+
+			var publicFunc2 = function() {
+					privateFunc();
+			};
+
+			// Return the object that is assigned to Module
+			return {
+					publicFunc1: publicFunc1,
+					publicFunc2: publicFunc2
+			};
+	}());
+
+6. 
+	1. Syntax testing, testing ini digunakan untuk mengidentifikasi errors yang dibuat selama penulisan kode dan memeriksa code tersebut sesuai tidak dengan guideline yang ada.
+	2. Unit testing, testing ini memastikan setiap unit kode yang kita buat sesuai dengan harapan. 
+	3. Automated Tool dengan Google Lighthouse, tool ini untuk mengukur kualitas dari web pages.
+
+7. Nginx 
+	Pros: 
+	1. Lebih ringan 
+	2. Punya banyak opsi dalam hal optimize dan serve static content
+	3. Stabilitas
+
+	Cons:  
+	1. Kekurangan dalam log monitoring 
+	2. Window support yang terbatas
+
+8. Untuk sekarang saya masih menggunakan manual process, yaitu dengan cara menarik kode yang terakhir `git pull` kemudian membuild ulang kode tersebut dan restart. 
+
+9. 
+	-- Tentang Project --
+		1. Judul Project
+		2. Deksripsi Singkat
+		3. Libray/Framework yang digunakan
+	-- Getting Started --
+		1. Prasyarat
+		2. Cara install
+	-- License --
+	-- Kontak --
+
+
