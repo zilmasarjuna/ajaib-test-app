@@ -25,4 +25,4 @@ Make sure you have installed all of the following prerequisites on your local ma
 2. Move to repo root directory.
 3. Install NPM packages (`npm install`).
 4. `npm start`
-5. You can now view *react-movie-app* in the browser by going to [http://localhost:3000](http://localhost:3000)
+5. You can now view *ajaib-test-app* in the browser by going to [http://localhost:3000](http://localhost:3000)
