@@ -5,7 +5,6 @@ import useUser from '../hooks'
 
 const ListUser = () => {
   const {listUser, handleFetch } = useUser()
-  console.log('list user', listUser)
   const columns = [ {
     title: 'Username',
     dataIndex: 'login',
@@ -50,6 +49,7 @@ const ListUser = () => {
   return (
     <Table 
       dataSource={listUser.data}
+      rowKey="phone"
       columns={columns}
       loading={listUser.isFetching}
       onChange={handleChange}
