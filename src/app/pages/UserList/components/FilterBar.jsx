@@ -64,12 +64,12 @@ const FilterBar = () => {
         <Row gutter={20}>
           <Col md={6} xs={24}>
             <Form.Item label="Search" name="keyword">
-              <Input onChange={handleSearch} />
+              <Input onChange={handleSearch} placeholder="Search" />
             </Form.Item>
           </Col>
           <Col md={6} xs={24}>
             <Form.Item label="Gender" name="gender">
-              <Select onChange={handleSelect} options={genderOption} />
+              <Select onChange={handleSelect} options={genderOption} placeholder="Gender" />
             </Form.Item>
           </Col>
           <Col md={4} xs={24}>
